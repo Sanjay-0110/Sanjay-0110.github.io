@@ -9,7 +9,7 @@ export const profile = {
   bio: "I build machine learning systems and analytical pipelines that help organisations understand what's happening and what to do next.",
   location: "Manchester, England",
   email: "sjai58066@gmail.com",
-  avatarUrl: "/profile.png",
+  avatarUrl: "/san.jpeg",
   cvUrl: "/cv.pdf",
   availableForWork: true,
   education: "Msc Data Science University of Manchester 2025-2026",
