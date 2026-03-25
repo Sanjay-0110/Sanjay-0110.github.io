@@ -41,23 +41,17 @@ export default function RootLayout({
     <html lang="en" className={`${jetbrainsMono.variable} ${dmSans.variable}`}>
       <head>
         {GA_ID && (
-          <>
-            <script
-              async
+  <>
+          <script
+            async
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}');
-                `,
-              }}
-            />
-          </>
-        )}
+          />
+          <script
+              defer
+              src={`/ga-init.js?id=${GA_ID}`}
+          />
+  </>
+)}
         {/* Anti-flash: apply saved theme before first paint */}
         <script
           dangerouslySetInnerHTML={{
