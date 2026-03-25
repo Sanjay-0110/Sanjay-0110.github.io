@@ -85,7 +85,7 @@ export default function HomePage() {
 
         {/* ── Currently ────────────────────────────────────────────────────── */}
         <section style={{ marginBottom: 64 }}>
-          <p className="label" style={{ marginBottom: 20 }}>// currently</p>
+          <p className="currently-grid" style={{ marginBottom: 20 }}>// currently</p>
           <div
             style={{
               display: "grid",
@@ -277,7 +277,7 @@ export default function HomePage() {
 
         {/* ── Social row ───────────────────────────────────────────────────── */}
         <section>
-          <p className="label" style={{ marginBottom: 20 }}>// find me</p>
+          <p className="findme-grid" style={{ marginBottom: 20 }}>// find me</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "var(--border)" }}>
             {social.map((s) => (
               <a
@@ -330,7 +330,12 @@ export default function HomePage() {
           display: inline-block;
         }
         .btn-ghost:hover { border-color: var(--border-hover); color: var(--text-primary); }
+        @media (max-width: 640px) {
+          .currently-grid { grid-template-columns: 1fr !important; }
+          .findme-grid { grid-template-columns: 1fr 1fr !important; }
+  }
       `}</style>
+
     </div>
   );
 }
