@@ -66,17 +66,7 @@ export default function Nav() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "0.72rem",
-                    letterSpacing: "0.04em",
-                    padding: "4px 10px",
-                    color: active ? "var(--accent)" : "var(--text-secondary)",
-                    borderBottom: active
-                      ? "1px solid var(--accent)"
-                      : "1px solid transparent",
-                    transition: "color 0.15s, border-color 0.15s",
-                  }}
+                  className={`nav-item ${active ? "nav-active" : ""}`}
                 >
                   {item.label}
                 </Link>
@@ -181,6 +171,47 @@ export default function Nav() {
       )}
 
       <style>{`
+        /* Nav item base */
+        .nav-item {
+          font-family: var(--font-mono);
+          font-size: 0.72rem;
+          letter-spacing: 0.04em;
+          padding: 4px 10px;
+          color: var(--text-secondary);
+          position: relative;
+          transition: color 0.2s ease;
+        }
+
+        /* Animated underline via pseudo element */
+        .nav-item::after {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 10px;
+          right: 10px;
+          height: 1px;
+          background: var(--accent);
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.25s ease;
+        }
+
+        /* Hover — grows from left */
+        .nav-item:hover {
+          color: var(--accent);
+        }
+        .nav-item:hover::after {
+          transform: scaleX(1);
+        }
+
+        /* Active — always shown */
+        .nav-active {
+          color: var(--accent) !important;
+        }
+        .nav-active::after {
+          transform: scaleX(1) !important;
+        }
+
         @media (max-width: 640px) {
           .desktop-nav { display: none !important; }
           .hamburger { display: flex !important; }
