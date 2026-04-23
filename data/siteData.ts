@@ -28,7 +28,7 @@ export const navigation = [
 export const social = [
   { label: "GitHub", href: "https://github.com/sanjay-0110", icon: "github", username: "@sanjay-0110" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sanjayk1415/", icon: "linkedin", username: "@sanjayk1415" },
-  { label: "Twitter / X", href: "https://x.com/TheSan1409", icon: "twitter", username: "@TheSan1409" },
+  { label: "Twitter / X", href: "https://x.com/debugmind", icon: "twitter", username: "@debugmind" },
   { label: "Email", href: "sjai58066@gmail.com", icon: "mail", username: "@sjai58066@gmail.com" },
 ];
 
