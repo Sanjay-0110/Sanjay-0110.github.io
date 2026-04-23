@@ -22,19 +22,19 @@
 
 /* ─── Light theme ────────────────────────────────────────────────────────────── */
 [data-theme="light"] {
-  --bg: #f5f4f0;
-  --bg-subtle: #eeece8;
-  --bg-card: #edeae5;
-  --border: #d8d4cc;
-  --border-hover: #c0bbb2;
-  --text-primary: #1a1a1a;
-  --text-secondary: #555550;
-  --text-muted: #999990;
-  --accent: #1a7a4a;
-  --accent-dim: #d0ece0;
-  --accent-blue: #1a4fa0;
-  --accent-orange: #b85a00;
-  --accent-purple: #6a3ab0;
+  --bg: #ffffff;
+  --bg-subtle: #f5f5f3;
+  --bg-card: #f0efeb;
+  --border: #c8c4bc;
+  --border-hover: #a8a49c;
+  --text-primary: #0a0a0a;
+  --text-secondary: #3a3a38;
+  --text-muted: #767670;
+  --accent: #0f6b3a;
+  --accent-dim: #c8e8d8;
+  --accent-blue: #0d3d8a;
+  --accent-orange: #a04800;
+  --accent-purple: #5a2a9a;
 }
 
 /* ─── Smooth theme transition ────────────────────────────────────────────────── */

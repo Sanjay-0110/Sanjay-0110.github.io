@@ -28,7 +28,7 @@ export default function Nav() {
           position: "sticky",
           top: 0,
           zIndex: 50,
-          background: "rgba(13,13,13,0.92)",
+          background: "color-mix(in srgb, var(--bg) 92%, transparent)",
           backdropFilter: "blur(8px)",
         }}
       >
