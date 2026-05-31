@@ -33,4 +33,15 @@ export const blogPostsMeta: BlogPostMeta[] = [
     readingTime: "4 min read",
     externalUrl: "https://sjai58066.substack.com/p/the-b-side-of-brilliance-understanding",
   },
+
+  {
+    slug: "Monte Carlo Simulation in Python",
+    title: "From Casino to Code: Understanding Monte Carlo Simulation in Python",
+    date: "2025-04-28",
+    category: "Writing",
+    tags: ["Python", "Monte Carlo"],
+    summary: "Exploring Monte Carlo Simulation as a technique that uses repeated random experiments to estimate probabilities and solve uncertain problems. It introduces the idea of stochastic models, where results vary because of randomness, and explains why simulations become reliable through the Law of Large Numbers.",
+    readingTime: "6 min read",
+    externalUrl: "https://medium.com/@sanjaykeerthi1415/from-casino-to-code-understanding-monte-carlo-simulation-in-python-70328151ae47",
+  },
 ];

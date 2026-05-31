@@ -84,7 +84,7 @@ export const projects = [
     tags: ["Python", "scikit-learn", "LSTM", "Pandas", "Matplotlib"],
     githubUrl: "https://github.com/Sanjay-0110/StockMarket-Prediction",
     liveUrl: "",
-    featured: true,
+    featured: false,
   },
   {
     id: "proj-3",
@@ -133,6 +133,26 @@ export const projects = [
       "A desktop note-taking application built in Python to consolidate core programming skills into a practical project. Implemented create, read, update, and delete functionality with a simple GUI, demonstrating clean application structure suitable for beginners.",
     tags: ["Python", "Tkinter", "File I/O"],
     githubUrl: "https://github.com/Sanjay-0110/Notepad_application",
+    liveUrl: "",
+    featured: false,
+  },
+  {
+    id: "proj-8",
+    title: "FIFA 26 PREDICTION",
+    summary:
+      "A Python-based World Cup simulation project that uses static ELO ratings and team attack/defense profiles to model match outcomes with Poisson score probabilities. It simulates group stage results and a full knockout bracket, then runs Monte Carlo trials to estimate each team’s chances of reaching rounds like R16, QF, SF, final, and winning the tournament.",
+    tags: ["Python", "Monte Carlo", "FIFA 2026", "sports analytics", "simulation"],
+    githubUrl: "https://github.com/Sanjay-0110/FIFA26",
+    liveUrl: "",
+    featured: true,
+  },
+  {
+    id: "proj-9",
+    title: "TN26 ELECTION ANALYSIS",
+    summary:
+      "A Tamil Nadu election analysis project that scrapes 2026 ECI results and 2021 historical data, cleans vote/seat datasets, and supports exploratory analysis of party performance, vote share, and constituency-level trends.",
+    tags: ["Python", "Election", "Analytics"],
+    githubUrl: "https://github.com/Sanjay-0110/TN26-ELECTION",
     liveUrl: "",
     featured: false,
   },
