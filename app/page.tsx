@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import SkillRadar from "@/components/SkillRadar";
 import { profile, social, projects, experience } from "@/data/siteData";
 
 export const metadata: Metadata = {
@@ -79,6 +80,10 @@ export default function HomePage() {
               download cv
             </Link>
           </div>
+        </section>
+
+        <section style={{ marginBottom: 64 }}>
+          <SkillRadar />
         </section>
 
         <div className="divider" />
