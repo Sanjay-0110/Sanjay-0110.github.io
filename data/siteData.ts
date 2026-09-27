@@ -67,6 +67,16 @@ export const experience = [
 
 export const projects = [
   {
+    id: "proj-dissertation",
+    title: "Domain-Robust Polyp Detection (MSc Dissertation)",
+    summary:
+      "Investigates why polyp-segmentation models fail on colonoscopy images from other hospitals. Trained a compact 860K-parameter model on Kvasir-SEG only and tested it with no fine-tuning: Dice fell from 0.72 in-domain to 0.40 on CVC-ClinicDB (−45%). A Shades-of-Gray colour normaliser barely changed that drop (−45.2% vs −45.8% without it), so the hypothesis that scanner colour and lighting cause the gap was not supported. Compressing only the middle encoder layers, rather than all layers equally, gave a smaller cross-domain drop on both external datasets (CVC-ClinicDB −41.5% vs −43.6%, ETIS-Larib −62.7% vs −65.1%).",
+    tags: ["Python", "PyTorch", "Segmentation", "Domain Shift", "Medical Imaging", "HPC"],
+    githubUrl: "https://github.com/Sanjay-0110/Final-Dissertation",
+    liveUrl: "",
+    featured: true,
+  },
+  {
     id: "proj-1",
     title: "Traffic Flow Optimization using LSTM",
     summary:
