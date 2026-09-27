@@ -74,7 +74,7 @@ export default function SkillRadar() {
   return (
     <div className="radar-wrap">
       <div className="eyebrow">Skill profile</div>
-      <h1>Data Science Skill Map</h1>
+      <h2>Data Science Skill Map</h2>
 
       <div className="tabs">
         {categoryOrder.map((id) => (
@@ -170,7 +170,7 @@ export default function SkillRadar() {
           text-transform: uppercase;
           margin-bottom: 6px;
         }
-        h1 {
+        h2 {
           font-size: 22px;
           font-weight: 600;
           margin: 0 0 30px;

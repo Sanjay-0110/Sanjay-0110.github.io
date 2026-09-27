@@ -5,16 +5,16 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as "dark" | "light" | null;
-    const preferred = stored ?? "dark";
-    setTheme(preferred);
-    document.documentElement.setAttribute("data-theme", preferred);
+    // The inline script in layout.tsx has already applied the saved theme
+    setTheme(document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark");
   }, []);
 
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
-    localStorage.setItem("theme", next);
+    try {
+      localStorage.setItem("theme", next);
+    } catch {}
     document.documentElement.setAttribute("data-theme", next);
   };
 

@@ -1,5 +1,5 @@
 // data/blogPosts.ts
-// Metadata for blog posts. Payloads live in blogPosts.generated.json.
+// Blog posts are hosted externally (Substack / Medium); this lists them on /blog.
 
 export interface BlogPostMeta {
   slug: string;
@@ -9,7 +9,7 @@ export interface BlogPostMeta {
   tags: string[];
   summary: string;
   readingTime: string; // e.g. "5 min read"
-  externalUrl?: string;
+  externalUrl: string;
 }
 
 export const blogPostsMeta: BlogPostMeta[] = [
@@ -35,7 +35,7 @@ export const blogPostsMeta: BlogPostMeta[] = [
   },
 
   {
-    slug: "Monte Carlo Simulation in Python",
+    slug: "monte-carlo-simulation-python",
     title: "From Casino to Code: Understanding Monte Carlo Simulation in Python",
     date: "2025-04-28",
     category: "Writing",

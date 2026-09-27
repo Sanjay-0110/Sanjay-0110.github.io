@@ -12,7 +12,7 @@ export const profile = {
   avatarUrl: "/san.jpeg",
   cvUrl: "/cv.pdf",
   availableForWork: true,
-  education: "Msc Data Science University of Manchester 2025-2026",
+  education: "MSc Data Science, University of Manchester (2025–2026)",
 };
 
 export const navigation = [
@@ -29,7 +29,7 @@ export const social = [
   { label: "GitHub", href: "https://github.com/sanjay-0110", icon: "github", username: "@sanjay-0110" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sanjayk1415/", icon: "linkedin", username: "@sanjayk1415" },
   { label: "Twitter / X", href: "https://x.com/debugmind", icon: "twitter", username: "@debugmind" },
-  { label: "Email", href: "sjai58066@gmail.com", icon: "mail", username: "@sjai58066@gmail.com" },
+  { label: "Email", href: "mailto:sjai58066@gmail.com", icon: "mail", username: "sjai58066@gmail.com" },
 ];
 
 export const experience = [
@@ -138,7 +138,7 @@ export const projects = [
   },
   {
     id: "proj-8",
-    title: "FIFA 26 PREDICTION",
+    title: "FIFA World Cup 2026 Prediction",
     summary:
       "A Python-based World Cup simulation project that uses static ELO ratings and team attack/defense profiles to model match outcomes with Poisson score probabilities. It simulates group stage results and a full knockout bracket, then runs Monte Carlo trials to estimate each team’s chances of reaching rounds like R16, QF, SF, final, and winning the tournament.",
     tags: ["Python", "Monte Carlo", "FIFA 2026", "sports analytics", "simulation"],
@@ -148,7 +148,7 @@ export const projects = [
   },
   {
     id: "proj-9",
-    title: "TN26 ELECTION ANALYSIS",
+    title: "Tamil Nadu 2026 Election Analysis",
     summary:
       "A Tamil Nadu election analysis project that scrapes 2026 ECI results and 2021 historical data, cleans vote/seat datasets, and supports exploratory analysis of party performance, vote share, and constituency-level trends.",
     tags: ["Python", "Election", "Analytics"],
@@ -194,31 +194,6 @@ export const principles = [
     index: "06",
     title: "Disagree in writing, commit in code",
     body: "Technical disagreements belong in pull request comments and design docs, not in passive implementation choices. State your concern clearly, give the team a chance to respond, then align and execute together.",
-  },
-];
-
-export const research = [
-  {
-    id: "r-1",
-    title: "Graph-Based Knowledge Representation for Biomedical Question Answering",
-    venue: "ESWC 2021",
-    year: "2021",
-    authors: "Sanjay Kumar, A. O'Brien, M. Decker",
-    abstract:
-      "We propose a hybrid retrieval-augmented architecture that combines sparse knowledge graphs with dense vector retrieval to improve factual consistency in biomedical QA.",
-    pdfUrl: "/papers/graph-kgqa-eswc2021.pdf",
-    arxivUrl: "https://arxiv.org/abs/2101.00001",
-  },
-  {
-    id: "r-2",
-    title: "Data Drift Detection in Production ML Pipelines: A Comparative Study",
-    venue: "NeurIPS Workshop on ML Systems, 2022",
-    year: "2022",
-    authors: "Sanjay Kumar, L. Walsh",
-    abstract:
-      "We benchmark nine statistical and learned drift detectors across tabular, image, and text modalities, highlighting the gap between offline evaluation and production performance.",
-    pdfUrl: "/papers/drift-detection-neurips2022.pdf",
-    arxivUrl: "https://arxiv.org/abs/2201.00002",
   },
 ];
 

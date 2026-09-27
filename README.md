@@ -1,4 +1,4 @@
-# Sanjay Kumar — Portfolio
+# Sanjay Keerthi — Portfolio
 
 Personal portfolio site built with Next.js, React 19, TypeScript, and Tailwind CSS 4.
 
@@ -19,20 +19,23 @@ Personal portfolio site built with Next.js, React 19, TypeScript, and Tailwind C
 │   ├── page.tsx            # Home
 │   ├── experience/         # Work history
 │   ├── projects/           # Side projects
-│   ├── research/           # Publications
-│   ├── blog/               # Blog listing + [slug] post pages
+│   ├── research/           # Research (placeholder)
+│   ├── blog/               # Blog listing (links to Substack / Medium)
 │   ├── principles/         # Working principles
 │   └── contact/            # Contact + CV download
 ├── components/
 │   ├── Nav.tsx
-│   └── Footer.tsx
+│   ├── Footer.tsx
+│   ├── ThemeToggle.tsx
+│   └── SkillRadar.tsx      # Skill map on the home page
 ├── data/
 │   ├── siteData.ts         # ← Edit all content here
-│   ├── blogPosts.ts        # Blog post metadata (slugs, categories, tags)
-│   └── blogPosts.generated.json  # Blog post bodies (Markdown)
+│   └── blogPosts.ts        # Blog post list (title, date, tags, external link)
 └── public/
-    ├── profile.jpg         # Your profile photo
-    └── cv.pdf              # Your CV
+    ├── san.jpeg            # Profile photo (400×400)
+    ├── icon.png            # Favicon (64×64)
+    ├── apple-touch-icon.png  # Home-screen icon (180×180)
+    └── cv.pdf              # CV
 ```
 
 ## Getting Started
@@ -40,6 +43,12 @@ Personal portfolio site built with Next.js, React 19, TypeScript, and Tailwind C
 ```bash
 npm install
 npm run dev
+```
+
+Or with Docker (no local Node needed):
+
+```bash
+docker compose up
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -51,16 +60,13 @@ Open [http://localhost:3000](http://localhost:3000).
 - `experience` — work history entries
 - `projects` — project cards
 - `principles` — working principles list
-- `research` — publications
 - `social` — links to GitHub, LinkedIn, etc.
 
-**Blog posts** are split across two files:
-- `data/blogPosts.ts` — metadata: slug, title, date, category, tags, summary, reading time
-- `data/blogPosts.generated.json` — post body content in Markdown (headings + paragraphs)
+**Blog posts** live in `data/blogPosts.ts`. Each entry has a slug, title, date, tags, summary, reading time, and the `externalUrl` of the published post.
 
 **Static assets:**
-- Replace `public/profile.jpg` with your actual photo
-- Replace `public/cv.pdf` with your actual CV
+- `public/san.jpeg` — keep it a small square image (about 400×400)
+- `public/cv.pdf` — replace with your latest CV
 
 ## Deploying to GitHub Pages
 

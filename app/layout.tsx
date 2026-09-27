@@ -38,10 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${dmSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${jetbrainsMono.variable} ${dmSans.variable}`}>
       <head>
-        <link rel="icon" href="/profile.png" />
-        <link rel="apple-touch-icon" href="/profile.png" />
+        <link rel="icon" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {GA_ID && (
         <>
           <script
@@ -59,7 +59,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                var theme = localStorage.getItem('theme') || 'dark';
+                var theme = 'dark';
+                try { theme = localStorage.getItem('theme') || 'dark'; } catch (e) {}
                 document.documentElement.setAttribute('data-theme', theme);
               })();
             `,

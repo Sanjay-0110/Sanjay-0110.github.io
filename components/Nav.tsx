@@ -74,51 +74,53 @@ export default function Nav() {
             })}
           </nav>
 
-          <ThemeToggle />
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <ThemeToggle />
 
-          {/* Hamburger button — mobile only */}
-          <button
-            className="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-            style={{
-              display: "none",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 5,
-              width: 36,
-              height: 36,
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              padding: 4,
-            }}
-          >
-            <span style={{
-              display: "block",
-              width: 20,
-              height: 1,
-              background: menuOpen ? "var(--accent)" : "var(--text-secondary)",
-              transform: menuOpen ? "translateY(6px) rotate(45deg)" : "none",
-              transition: "transform 0.2s, background 0.2s",
-            }} />
-            <span style={{
-              display: "block",
-              width: 20,
-              height: 1,
-              background: menuOpen ? "transparent" : "var(--text-secondary)",
-              transition: "background 0.2s",
-            }} />
-            <span style={{
-              display: "block",
-              width: 20,
-              height: 1,
-              background: menuOpen ? "var(--accent)" : "var(--text-secondary)",
-              transform: menuOpen ? "translateY(-6px) rotate(-45deg)" : "none",
-              transition: "transform 0.2s, background 0.2s",
-            }} />
-          </button>
+            {/* Hamburger button — mobile only */}
+            <button
+              className="hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+              style={{
+                display: "none",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: 5,
+                width: 36,
+                height: 36,
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: 4,
+              }}
+            >
+              <span style={{
+                display: "block",
+                width: 20,
+                height: 1,
+                background: menuOpen ? "var(--accent)" : "var(--text-secondary)",
+                transform: menuOpen ? "translateY(6px) rotate(45deg)" : "none",
+                transition: "transform 0.2s, background 0.2s",
+              }} />
+              <span style={{
+                display: "block",
+                width: 20,
+                height: 1,
+                background: menuOpen ? "transparent" : "var(--text-secondary)",
+                transition: "background 0.2s",
+              }} />
+              <span style={{
+                display: "block",
+                width: 20,
+                height: 1,
+                background: menuOpen ? "var(--accent)" : "var(--text-secondary)",
+                transform: menuOpen ? "translateY(-6px) rotate(-45deg)" : "none",
+                transition: "transform 0.2s, background 0.2s",
+              }} />
+            </button>
+          </div>
         </div>
       </header>
 

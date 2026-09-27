@@ -43,9 +43,9 @@ export default function BlogPage() {
             return (
               <Link
                 key={post.slug}
-                href={post.externalUrl ?? `/blog/${post.slug}`}
-                target={post.externalUrl ? "_blank" : undefined}
-                rel={post.externalUrl ? "noopener noreferrer" : undefined}
+                href={post.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "120px 1fr auto",

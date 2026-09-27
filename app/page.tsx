@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import SkillRadar from "@/components/SkillRadar";
-import { profile, social, projects, experience } from "@/data/siteData";
+import { profile, social, experience } from "@/data/siteData";
 
 export const metadata: Metadata = {
   title: `${profile.fullName} — ${profile.role}`,
 };
 
 export default function HomePage() {
-  const featured = projects.filter((p) => p.featured);
   const latestRole = experience[0];
 
   return (
@@ -32,7 +31,7 @@ export default function HomePage() {
               alt={profile.name}
               width={120}
               height={120}
-              style={{ borderRadius: "50%", border: "2px solid var(--border)", marginBottom: 20, objectFit: "cover",}}
+              style={{ width: 120, height: 120, borderRadius: "50%", border: "2px solid var(--border)", marginBottom: 20, objectFit: "cover" }}
           />
 
           <h1
@@ -179,106 +178,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Featured projects (commented out – re-enable when ready) ────────
-        <section style={{ marginBottom: 64 }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              justifyContent: "space-between",
-              marginBottom: 24,
-            }}
-          >
-            <p className="label">// featured projects</p>
-            <Link
-              href="/projects"
-              style={{
-                fontFamily: "var(--font-mono)",
-                fontSize: "0.72rem",
-                color: "var(--accent)",
-              }}
-            >
-              all projects →
-            </Link>
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "var(--border)" }}>
-            {featured.map((proj) => (
-              <div
-                key={proj.id}
-                className="card"
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "flex-start",
-                  gap: 24,
-                  flexWrap: "wrap",
-                }}
-              >
-                <div style={{ flex: 1 }}>
-                  <h3
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "0.95rem",
-                      marginBottom: 8,
-                      color: "var(--text-primary)",
-                    }}
-                  >
-                    {proj.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "0.85rem",
-                      color: "var(--text-secondary)",
-                      marginBottom: 14,
-                    }}
-                  >
-                    {proj.summary}
-                  </p>
-                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                    {proj.tags.map((t) => (
-                      <span key={t} className="tag">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div style={{ display: "flex", gap: 12, flexShrink: 0 }}>
-                  {proj.githubUrl && (
-                    <a
-                      href={proj.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: "0.72rem",
-                        color: "var(--accent)",
-                      }}
-                    >
-                      gh →
-                    </a>
-                  )}
-                  {proj.liveUrl && (
-                    <a
-                      href={proj.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: "0.72rem",
-                        color: "var(--accent-blue)",
-                      }}
-                    >
-                      live →
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        ── end featured projects ──────────────────────────────────────────── */}
-
         <div className="divider" />
 
         {/* ── Social row ───────────────────────────────────────────────────── */}
@@ -339,7 +238,7 @@ export default function HomePage() {
         @media (max-width: 640px) {
           .currently-grid { grid-template-columns: 1fr !important; }
           .findme-grid { grid-template-columns: 1fr 1fr !important; }
-  }
+        }
       `}</style>
 
     </div>
