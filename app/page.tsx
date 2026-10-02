@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import SkillRadar from "@/components/SkillRadar";
+import { LiquidMetalButton } from "@/components/ui/liquid-metal-button";
 import { profile, social, experience } from "@/data/siteData";
 
 export const metadata: Metadata = {
@@ -70,14 +70,12 @@ export default function HomePage() {
           {/* CTA row */}
           <div
             className="fade-up fade-up-5"
-            style={{ display: "flex", gap: 12, flexWrap: "wrap" }}
+            style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}
           >
-            <Link href="/projects" className="btn-primary">
-              view projects →
-            </Link>
-            <Link href={profile.cvUrl} className="btn-ghost">
-              download cv
-            </Link>
+            <LiquidMetalButton href="/projects">view projects →</LiquidMetalButton>
+            <LiquidMetalButton href={profile.cvUrl} download>
+              download cv ↓
+            </LiquidMetalButton>
           </div>
         </section>
 
@@ -213,28 +211,6 @@ export default function HomePage() {
       </div>
 
       <style>{`
-        .btn-primary {
-          font-family: var(--font-mono);
-          font-size: 0.78rem;
-          letter-spacing: 0.04em;
-          color: var(--bg);
-          background: var(--accent);
-          padding: 8px 20px;
-          transition: opacity 0.15s;
-          display: inline-block;
-        }
-        .btn-primary:hover { opacity: 0.85; color: var(--bg); }
-        .btn-ghost {
-          font-family: var(--font-mono);
-          font-size: 0.78rem;
-          letter-spacing: 0.04em;
-          color: var(--text-secondary);
-          border: 1px solid var(--border);
-          padding: 8px 20px;
-          transition: border-color 0.15s, color 0.15s;
-          display: inline-block;
-        }
-        .btn-ghost:hover { border-color: var(--border-hover); color: var(--text-primary); }
         @media (max-width: 640px) {
           .currently-grid { grid-template-columns: 1fr !important; }
           .findme-grid { grid-template-columns: 1fr 1fr !important; }

@@ -51,6 +51,12 @@ Or with Docker (no local Node needed):
 docker compose up
 ```
 
+After adding or updating a package, rebuild so the container picks it up (otherwise you get "Module not found"):
+
+```bash
+docker compose up --build --renew-anon-volumes
+```
+
 Open [http://localhost:3000](http://localhost:3000).
 
 ## Editing Content

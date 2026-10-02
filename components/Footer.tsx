@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { profile, social } from "@/data/siteData";
 
 export default function Footer() {
@@ -51,8 +50,9 @@ export default function Footer() {
           ))}
         </div>
 
-        <Link
+        <a
           href={profile.cvUrl}
+          download
           style={{
             fontFamily: "var(--font-mono)",
             fontSize: "0.72rem",
@@ -61,7 +61,7 @@ export default function Footer() {
           }}
         >
           ↓ cv.pdf
-        </Link>
+        </a>
       </div>
     </footer>
   );
