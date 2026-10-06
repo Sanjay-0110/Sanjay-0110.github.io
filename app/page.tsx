@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import SkillRadar from "@/components/SkillRadar";
+import Skills from "@/components/Skills";
 import { LiquidMetalButton } from "@/components/ui/liquid-metal-button";
 import { profile, social, experience } from "@/data/siteData";
 
@@ -80,7 +80,7 @@ export default function HomePage() {
         </section>
 
         <section style={{ marginBottom: 64 }}>
-          <SkillRadar />
+          <Skills />
         </section>
 
         <div className="divider" />

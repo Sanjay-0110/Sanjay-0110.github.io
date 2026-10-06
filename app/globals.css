@@ -45,6 +45,14 @@ html { transition: background-color 0.2s ease; }
 
 html { scroll-behavior: smooth; }
 
+/* Keep anchored cards (skill links) clear of the sticky nav */
+[id] { scroll-margin-top: 80px; }
+.hash-flash { animation: hash-flash 2s ease-out; }
+@keyframes hash-flash {
+  0%, 50% { box-shadow: inset 0 0 0 1px var(--accent); }
+  100% { box-shadow: inset 0 0 0 1px transparent; }
+}
+
 body {
   background: var(--bg);
   color: var(--text-primary);

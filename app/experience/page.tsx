@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { experience } from "@/data/siteData";
+import HashHighlight from "@/components/HashHighlight";
 
 export const metadata: Metadata = { title: "Experience" };
 
@@ -7,6 +8,7 @@ export default function ExperiencePage() {
   return (
     <div style={{ paddingTop: 72, paddingBottom: 96 }}>
       <div className="container">
+        <HashHighlight />
 
         <header style={{ marginBottom: 56 }}>
           <p className="label" style={{ marginBottom: 12, color: "var(--accent)" }}>
@@ -26,6 +28,7 @@ export default function ExperiencePage() {
           {experience.map((role, i) => (
             <div
               key={role.id}
+              id={role.id}
               style={{
                 position: "relative",
                 marginBottom: i < experience.length - 1 ? 56 : 0,

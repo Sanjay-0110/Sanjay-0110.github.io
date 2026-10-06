@@ -168,6 +168,44 @@ export const projects = [
   },
 ];
 
+// Skills shown on the home page. Each one points to where it was used:
+// `ref` is a project or experience id from above, `href` an external link.
+// Only list a skill here if you can point to real work for it.
+export type SkillEvidence = { label: string; ref?: string; href?: string };
+export type Skill = { name: string; usedIn: SkillEvidence[] | string };
+
+export const skills: { group: string; items: Skill[] }[] = [
+  {
+    group: "ml & deep learning",
+    items: [
+      { name: "PyTorch", usedIn: [{ label: "dissertation", ref: "proj-dissertation" }, { label: "vcodez", ref: "exp-1" }] },
+      { name: "TensorFlow / Keras", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "number plate cnn", ref: "proj-3" }] },
+      { name: "scikit-learn", usedIn: [{ label: "vcodez", ref: "exp-1" }, { label: "stock prices", ref: "proj-2" }, { label: "housing", ref: "proj-5" }] },
+      { name: "Computer vision", usedIn: [{ label: "dissertation", ref: "proj-dissertation" }, { label: "number plate cnn", ref: "proj-3" }] },
+      { name: "Time-series forecasting", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "vcodez", ref: "exp-1" }] },
+    ],
+  },
+  {
+    group: "data & pipelines",
+    items: [
+      { name: "Python", usedIn: "every project" },
+      { name: "SQL", usedIn: [{ label: "prepinsta", ref: "exp-2" }, { label: "internsavvy", ref: "exp-3" }] },
+      { name: "Pandas / NumPy", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "housing", ref: "proj-5" }, { label: "titanic", ref: "proj-6" }] },
+      { name: "Airflow", usedIn: [{ label: "vcodez", ref: "exp-1" }] },
+    ],
+  },
+  {
+    group: "stats & methods",
+    items: [
+      { name: "Monte Carlo simulation", usedIn: [{ label: "fifa 26", ref: "proj-8" }, { label: "blog post", href: "https://medium.com/@sanjaykeerthi1415/from-casino-to-code-understanding-monte-carlo-simulation-in-python-70328151ae47" }] },
+      { name: "Cross-validation & tuning", usedIn: [{ label: "vcodez", ref: "exp-1" }, { label: "titanic", ref: "proj-6" }] },
+      { name: "Imbalanced classification", usedIn: [{ label: "prepinsta", ref: "exp-2" }, { label: "internsavvy", ref: "exp-3" }] },
+    ],
+  },
+];
+
+export const tools = ["Git", "Docker", "Tableau", "Streamlit", "Linux / SLURM (HPC)"];
+
 export const principles = [
   {
     id: "p-1",

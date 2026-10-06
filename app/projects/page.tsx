@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { projects } from "@/data/siteData";
+import HashHighlight from "@/components/HashHighlight";
 
 export const metadata: Metadata = { title: "Projects" };
 
@@ -10,6 +11,7 @@ export default function ProjectsPage() {
   return (
     <div style={{ paddingTop: 72, paddingBottom: 96 }}>
       <div className="container">
+        <HashHighlight />
 
         <header style={{ marginBottom: 56 }}>
           <p className="label" style={{ marginBottom: 12, color: "var(--accent)" }}>
@@ -73,6 +75,7 @@ function ProjectCard({
 }) {
   return (
     <div
+      id={proj.id}
       className="card"
       style={{
         display: "flex",
