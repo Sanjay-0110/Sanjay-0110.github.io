@@ -6,12 +6,13 @@ export const profile = {
   fullName: "Sanjay Keerthi",
   role: "Data Scientist",
   tagline: "Turning messy data into clear decisions.",
-  bio: "I build machine learning systems and analytical pipelines that help organisations understand what's happening and what to do next.",
+  bio: "MSc Data Science (University of Manchester). I build forecasting and computer vision models, most recently studying why medical imaging models fail when moved between hospitals.",
   location: "Manchester, England",
   email: "sjai58066@gmail.com",
   avatarUrl: "/sanjay.jpg",
   cvUrl: "/cv.pdf",
   availableForWork: true,
+  availability: "open to data scientist & ML roles · UK",
   education: "MSc Data Science, University of Manchester (2025–2026)",
 };
 
@@ -37,20 +38,20 @@ export const experience = [
     id: "exp-1",
     company: "VCodez",
     role: "Data Scientist Intern",
-    period: "Feb 2025 – Jul 2025",
-    location: "Chennai, India",
+    period: "Jan 2025 – Jul 2025",
+    location: "Remote",
     description:
-      "Building and deploying machine learning models to solve business problems. Involved in the full ML pipeline from data preprocessing and feature engineering through to model evaluation and integration. Applied cross-validation and hyperparameter tuning techniques to improve model generalisation, gaining hands-on experience with the gap between notebook performance and production behaviour.",
-    tags: ["Python", "scikit-learn", "Machine Learning"],
+      "Built automated data ingestion, cleaning, and quality-validation pipelines in Airflow for 10M+ row climate-monitoring datasets, cutting 6+ hours of manual processing per sprint. Validated PyTorch and TensorFlow model outputs before they informed decisions, auditing for overfitting and data leakage. Built LSTM and ARIMA forecasting models on the validated pipelines, reaching 91% accuracy.",
+    tags: ["Python", "Airflow", "PyTorch", "TensorFlow", "LSTM", "ARIMA"],
   },
   {
     id: "exp-2",
     company: "PrepInsta",
-    role: "Data Analyst Intern",
-    period: "Jun 2024 – Aug 2024",
+    role: "Data Analytics Intern",
+    period: "Jun 2024 – Oct 2024",
     location: "Remote",
     description:
-      "Delivered end-to-end analytics projects across a team of four, combining EDA, machine learning, and Tableau dashboards to surface actionable insights. Built a customer relationship analysis dashboard that consolidated key metrics into a single view for stakeholders. Wrote reusable Python ETL scripts to automate data cleaning pipelines, reducing manual preprocessing effort and ensuring consistent, reproducible inputs across all models.",
+      "Ran exploratory and statistical analysis on customer campaign-spend data to find data quality issues and inform feature engineering. Worked with a team of four on cross-validation strategy for imbalanced classification models, improving F1-score by 15%. Cut reporting turnaround by 25% with Python-based analysis and Tableau dashboards.",
     tags: ["Python", "SQL", "Tableau", "EDA", "Machine Learning"],
   },
   {
@@ -80,8 +81,8 @@ export const projects = [
     id: "proj-1",
     title: "Traffic Flow Optimization using LSTM",
     summary:
-      "Trained a sequential LSTM model on metro traffic dataset to predict and optimise traffic flow patterns. Handled time-series preprocessing, sliding window feature engineering, and multi-step forecasting to capture temporal dependencies in congestion data.",
-    tags: ["Python", "LSTM", "TensorFlow", "Time Series", "Pandas"],
+      "Forecasts hourly traffic volume on the Minneapolis–St. Paul corridor with an LSTM trained on historical, weather, and time features, reaching an RMSE of 12.4 and 21% lower error than an ARIMA baseline. Served through a Streamlit app with an interactive route map.",
+    tags: ["Python", "LSTM", "TensorFlow", "Time Series", "Streamlit", "Pandas"],
     githubUrl: "https://github.com/Sanjay-0110/Traffic_Prediction_Project",
     liveUrl: "",
     featured: true,
@@ -103,46 +104,6 @@ export const projects = [
       "Built a CNN-based number plate detection pipeline that identifies and extracts licence plates from images, then converts the recognised text to a voice output using a text-to-speech engine. Trained on annotated vehicle image datasets.",
     tags: ["Python", "CNN", "OpenCV", "TensorFlow", "pyttsx3"],
     githubUrl: "https://github.com/Sanjay-0110/mini_project",
-    liveUrl: "",
-    featured: false,
-  },
-  {
-    id: "proj-4",
-    title: "Weather Prediction using Machine Learning",
-    summary:
-      "Developed a weather forecasting model using linear regression trained on historical meteorological data. Performed EDA on temperature, humidity, and pressure features, and built a clean prediction interface to display forecasted conditions.",
-    tags: ["Python", "scikit-learn", "Linear Regression", "EDA", "Matplotlib"],
-    githubUrl: "https://github.com/Sanjay-0110/Weather_prediction",
-    liveUrl: "",
-    featured: false,
-  },
-  {
-    id: "proj-5",
-    title: "California Housing Price Prediction",
-    summary:
-      "Predicted median house values across California districts using the classic census dataset. Compared multiple regression algorithms, performed feature scaling and correlation analysis, and visualised geographic price distributions using heatmaps.",
-    tags: ["Python", "scikit-learn", "Regression", "Seaborn", "Pandas"],
-    githubUrl: "https://www.kaggle.com/code/sanjay1415/california-housing-predictions",
-    liveUrl: "",
-    featured: false,
-  },
-  {
-    id: "proj-6",
-    title: "Titanic Survival Prediction",
-    summary:
-      "Classic ML case study predicting passenger survival on the Titanic. Focused on handling missing data, encoding categorical variables, and comparing classification models including logistic regression, decision trees, and random forests with cross-validation.",
-    tags: ["Python", "scikit-learn", "Classification", "EDA", "Pandas"],
-    githubUrl: "https://www.kaggle.com/code/sanjay1415/titanic-analysis-project",
-    liveUrl: "",
-    featured: false,
-  },
-  {
-    id: "proj-7",
-    title: "Note Application using Python",
-    summary:
-      "A desktop note-taking application built in Python to consolidate core programming skills into a practical project. Implemented create, read, update, and delete functionality with a simple GUI, demonstrating clean application structure suitable for beginners.",
-    tags: ["Python", "Tkinter", "File I/O"],
-    githubUrl: "https://github.com/Sanjay-0110/Notepad_application",
     liveUrl: "",
     featured: false,
   },
@@ -180,7 +141,7 @@ export const skills: { group: string; items: Skill[] }[] = [
     items: [
       { name: "PyTorch", usedIn: [{ label: "dissertation", ref: "proj-dissertation" }, { label: "vcodez", ref: "exp-1" }] },
       { name: "TensorFlow / Keras", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "number plate cnn", ref: "proj-3" }] },
-      { name: "scikit-learn", usedIn: [{ label: "vcodez", ref: "exp-1" }, { label: "stock prices", ref: "proj-2" }, { label: "housing", ref: "proj-5" }] },
+      { name: "scikit-learn", usedIn: [{ label: "stock prices", ref: "proj-2" }, { label: "traffic lstm", ref: "proj-1" }] },
       { name: "Computer vision", usedIn: [{ label: "dissertation", ref: "proj-dissertation" }, { label: "number plate cnn", ref: "proj-3" }] },
       { name: "Time-series forecasting", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "vcodez", ref: "exp-1" }] },
     ],
@@ -190,7 +151,7 @@ export const skills: { group: string; items: Skill[] }[] = [
     items: [
       { name: "Python", usedIn: "every project" },
       { name: "SQL", usedIn: [{ label: "prepinsta", ref: "exp-2" }, { label: "internsavvy", ref: "exp-3" }] },
-      { name: "Pandas / NumPy", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "housing", ref: "proj-5" }, { label: "titanic", ref: "proj-6" }] },
+      { name: "Pandas / NumPy", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "stock prices", ref: "proj-2" }] },
       { name: "Airflow", usedIn: [{ label: "vcodez", ref: "exp-1" }] },
     ],
   },
@@ -198,7 +159,7 @@ export const skills: { group: string; items: Skill[] }[] = [
     group: "stats & methods",
     items: [
       { name: "Monte Carlo simulation", usedIn: [{ label: "fifa 26", ref: "proj-8" }, { label: "blog post", href: "https://medium.com/@sanjaykeerthi1415/from-casino-to-code-understanding-monte-carlo-simulation-in-python-70328151ae47" }] },
-      { name: "Cross-validation & tuning", usedIn: [{ label: "vcodez", ref: "exp-1" }, { label: "titanic", ref: "proj-6" }] },
+      { name: "Model validation & leakage checks", usedIn: [{ label: "dissertation", ref: "proj-dissertation" }, { label: "vcodez", ref: "exp-1" }, { label: "prepinsta", ref: "exp-2" }] },
       { name: "Imbalanced classification", usedIn: [{ label: "prepinsta", ref: "exp-2" }, { label: "internsavvy", ref: "exp-3" }] },
     ],
   },

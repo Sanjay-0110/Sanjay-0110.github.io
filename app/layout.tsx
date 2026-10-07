@@ -20,6 +20,7 @@ const dmSans = DM_Sans({
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sanjay-0110.github.io"),
   title: {
     default: `${profile.fullName} — ${profile.role}`,
     template: `%s | ${profile.fullName}`,
@@ -29,6 +30,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: profile.fullName,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: `${profile.fullName} — ${profile.role}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og.png"],
   },
 };
 

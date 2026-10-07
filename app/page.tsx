@@ -22,7 +22,7 @@ export default function HomePage() {
               className="label"
               style={{ color: "var(--accent)", letterSpacing: "0.12em" }}
             >
-              {profile.availableForWork ? "// available for work" : "// not available"}
+              {profile.availableForWork ? `// ${profile.availability}` : "// not available"}
             </span>
           </div>
 
@@ -31,6 +31,7 @@ export default function HomePage() {
               alt={profile.name}
               width={120}
               height={120}
+              priority
               style={{ width: 120, height: 120, borderRadius: "50%", border: "2px solid var(--border)", marginBottom: 20, objectFit: "cover" }}
           />
 
