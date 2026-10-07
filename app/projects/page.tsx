@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { projects } from "@/data/siteData";
 import HashHighlight from "@/components/HashHighlight";
 
@@ -84,6 +86,15 @@ function ProjectCard({
         minHeight: 180,
       }}
     >
+      {proj.image && (
+        <Image
+          src={proj.image}
+          alt={proj.imageAlt ?? ""}
+          width={960}
+          height={540}
+          className="project-thumb"
+        />
+      )}
       <div style={{ flex: 1 }}>
         <div
           style={{
@@ -141,6 +152,18 @@ function ProjectCard({
       </div>
 
       <div style={{ display: "flex", gap: 16 }}>
+        {proj.caseStudyUrl && (
+          <Link
+            href={proj.caseStudyUrl}
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.72rem",
+              color: "var(--accent)",
+            }}
+          >
+            case study →
+          </Link>
+        )}
         {proj.githubUrl && (
           <a
             href={proj.githubUrl}

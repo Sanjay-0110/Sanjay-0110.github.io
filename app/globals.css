@@ -198,6 +198,17 @@ pre code {
 }
 .card:hover { border-color: var(--border-hover); }
 
+/* Project card image: full-bleed to the card edges, above the title */
+.project-thumb {
+  display: block;
+  width: calc(100% + 56px);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: -28px -28px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
 /* ─── Inline label ───────────────────────────────────────────────────────────── */
 .label {
   font-family: var(--font-mono);

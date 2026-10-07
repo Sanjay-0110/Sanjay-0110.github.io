@@ -75,6 +75,9 @@ export const projects = [
     tags: ["Python", "PyTorch", "Segmentation", "Domain Shift", "Medical Imaging", "HPC"],
     githubUrl: "https://github.com/Sanjay-0110/Final-Dissertation",
     liveUrl: "",
+    caseStudyUrl: "/research/polyp-detection",
+    image: "/projects/proj-dissertation.webp",
+    imageAlt: "Bar chart: Dice falls from 0.72 on Kvasir-SEG to 0.40 on unseen CVC-ClinicDB, with almost no change from the colour normaliser",
     featured: true,
   },
   {
@@ -85,6 +88,8 @@ export const projects = [
     tags: ["Python", "LSTM", "TensorFlow", "Time Series", "Streamlit", "Pandas"],
     githubUrl: "https://github.com/Sanjay-0110/Traffic_Prediction_Project",
     liveUrl: "",
+    image: "/projects/proj-1.webp",
+    imageAlt: "Line chart of actual vs predicted traffic volume over time",
     featured: true,
   },
   {
@@ -95,6 +100,8 @@ export const projects = [
     tags: ["Python", "scikit-learn", "LSTM", "Pandas", "Matplotlib"],
     githubUrl: "https://github.com/Sanjay-0110/StockMarket-Prediction",
     liveUrl: "",
+    image: "/projects/proj-2.webp",
+    imageAlt: "S&P 500 closing price history used to train the model",
     featured: false,
   },
   {
@@ -105,6 +112,8 @@ export const projects = [
     tags: ["Python", "CNN", "OpenCV", "TensorFlow", "pyttsx3"],
     githubUrl: "https://github.com/Sanjay-0110/mini_project",
     liveUrl: "",
+    image: "/projects/proj-3.webp",
+    imageAlt: "Licence plate with each detected character outlined by a bounding box",
     featured: false,
   },
   {
@@ -115,6 +124,8 @@ export const projects = [
     tags: ["Python", "Monte Carlo", "FIFA 2026", "sports analytics", "simulation"],
     githubUrl: "https://github.com/Sanjay-0110/FIFA26",
     liveUrl: "",
+    image: "/projects/proj-8.webp",
+    imageAlt: "Aerial view of a football pitch (photo: Bence Balla-Schottner, Unsplash)",
     featured: true,
   },
   {
@@ -125,6 +136,8 @@ export const projects = [
     tags: ["Python", "Election", "Analytics"],
     githubUrl: "https://github.com/Sanjay-0110/TN26-ELECTION",
     liveUrl: "",
+    image: "/projects/proj-9.webp",
+    imageAlt: "Bar chart of seats won by TVK, broken down by the party that held each seat in 2021",
     featured: false,
   },
 ];
