@@ -178,6 +178,19 @@ function ProjectCard({
             github →
           </a>
         )}
+        {proj.downloadUrl && (
+          <a
+            href={proj.downloadUrl}
+            download
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.72rem",
+              color: "var(--accent)",
+            }}
+          >
+            download workbook ↓
+          </a>
+        )}
         {proj.liveUrl && (
           <a
             href={proj.liveUrl}

@@ -93,6 +93,19 @@ export const projects = [
     featured: true,
   },
   {
+    id: "proj-10",
+    title: "Global Retail Price Analysis (Excel)",
+    summary:
+      "Cleans, models and reports on 2,000 crowdsourced grocery prices from Open Food Facts' Open Prices, recorded in 20 currencies (Feb–Oct 2026). Profiling found 14 data issues, logged with live row counts, including mislabelled source columns: the store column held contributor usernames and the city column held store names, so both were remapped before analysis. Converts every price to USD from an assumptions sheet, summarises by currency, store and month with formulas only (no pivots), and presents it in a dashboard with a currency selector.",
+    tags: ["Excel", "Data Cleaning", "Excel Tables", "COUNTIFS / AVERAGEIFS", "Dashboards"],
+    githubUrl: "",
+    liveUrl: "",
+    downloadUrl: "/files/retail-prices-excel-project.xlsx",
+    image: "/projects/proj-10.webp",
+    imageAlt: "Excel dashboard with KPI cards (2,000 records, average price $4.82), a currency selector, a monthly average price chart and a records-by-currency chart",
+    featured: false,
+  },
+  {
     id: "proj-2",
     title: "Stock Prices Prediction",
     summary:
@@ -166,6 +179,7 @@ export const skills: { group: string; items: Skill[] }[] = [
       { name: "SQL", usedIn: [{ label: "prepinsta", ref: "exp-2" }, { label: "internsavvy", ref: "exp-3" }] },
       { name: "Pandas / NumPy", usedIn: [{ label: "traffic lstm", ref: "proj-1" }, { label: "stock prices", ref: "proj-2" }] },
       { name: "Airflow", usedIn: [{ label: "vcodez", ref: "exp-1" }] },
+      { name: "Excel (Tables, COUNTIFS, dashboards)", usedIn: [{ label: "retail prices", ref: "proj-10" }] },
     ],
   },
   {
